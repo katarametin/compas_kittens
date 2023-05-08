@@ -1,0 +1,25 @@
+{
+    "name": "Polygon Area",
+    "nickname": "Area",
+    "category": "COMPAS Kittens",
+    "subcategory": "Area",
+    "description": "Compute area of a polygon.",
+    "exposure": 2,
+    "ghpython": {
+        "isAdvancedMode": true,
+        "iconDisplay": 2,
+        "inputParameters": [
+            {
+                "name": "polygon",
+                "description": "Polygon.",
+                "typeHintID": "polyline"
+            }
+        ],
+        "outputParameters": [
+            {
+                "name": "a",
+                "description": "Area."
+            }
+        ]
+    }
+}

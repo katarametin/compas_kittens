@@ -26,6 +26,7 @@ ns.configure(
     {
         "base_folder": os.path.dirname(__file__),
         "ghuser": {
+            "prefix": "",
             "source_dir": "src/compas_kittens/ghpython/components",
             "target_dir": "src/compas_kittens/ghpython/components/ghuser",
         },

@@ -1,0 +1,25 @@
+name: build-components
+
+on: [push]
+
+jobs:
+  build-components:
+    name: windows-ironpython
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: NuGet/setup-nuget@v1.0.5
+      - name: Install IronPython
+        run: |
+          choco install ironpython --version=2.7.8.1
+      - name: Install dependencies
+        run: |
+          nuget install Grasshopper -OutputDirectory ./lib -source https://api.nuget.org/v3/index.json
+      - uses: compas-dev/compas-actions.ghpython_components@v2
+        with:
+          source: src/compas_kittens/ghpython/components
+          target: build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ghuser-components
+          path: build
