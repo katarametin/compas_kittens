@@ -118,3 +118,5 @@ temp/**
 docs/api/generated/
 
 conda.recipe/
+
+src/compas_kittens/ghpython/components/ghuser
